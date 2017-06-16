@@ -1,0 +1,31 @@
+{
+    "name": "final-capstone-yoda-quotes",
+    "version": "1.0.0",
+    "description": "Hear famous quotes in yoda speak, you will.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/codysperoff/final-capstone-yoda-quotes.git"
+    },
+    "author": "Cody Speroff",
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "express": "^4.12.4",
+        "faker": "^4.1.0",
+        "mongodb": "^2.2.11",
+        "mongoose": "^4.7.1",
+        "morgan": "^1.7.0",
+        "unirest": "^0.5.1",
+        "uuid": "^2.0.3"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "chai-http": "^3.0.0",
+        "mocha": "^3.0.2"
+    },
+    "license": "MIT"
+}
