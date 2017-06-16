@@ -78,50 +78,43 @@ function closeServer() {
 
 
 // external API call
-
-//api call between the server and best buy api
-var getProducts = function (product_name) {
-
-    //console.log("inside the getProducts function");
-
+var getFromYodaSpeak = function(searchTerm) {
     var emitter = new events.EventEmitter();
-
-    //https://www.npmjs.com/package/bestbuy
-    var bby = require('bestbuy')('ccw7r1Dxrz9wNwgQuNWLOKqZ');
-    bby.products('(search=' + product_name + ')', {
-        pageSize: 10
-    }, function (err, data) {
-        if (err) {
-            console.warn(err);
-            emitter.emit('api call retuned error:', err);
-        } else if (data.total === 0) {
-            console.log('No products found');
-            emitter.emit('No products found', err);
-        } else {
-            console.log('Found %d products. First match "%s" is $%d', data.total, data.products[0].name, data.products[0].salePrice);
-            emitter.emit('end', data);
+    //console.log("inside getFromActive function");
+    unirest.get("https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.++Oh+wait.")
+        .header("X-Mashape-Key", "k8mRsliHRomshdTUOoSELbEBhicEp1idX4ejsnpN0qshKyXlUA")
+        .header("Accept", "text/plain")
+       // .header("Accept", "application/json")
+        .end(function(result) {
+        console.log(result.status, result.headers, result.body);
+        //success scenario
+        if (result.ok) {
+            emitter.emit('end', result.body);
+        }
+        //failure scenario
+        else {
+            emitter.emit('error', result.code);
         }
     });
-
     return emitter;
 };
 
 // local API endpoints
-app.get('/product/:product_name', function (request, response) {
+app.get('/yoda-quote/:quote_text', function (request, response) {
     //console.log(request.params.product_name);
-    if (request.params.product_name == "") {
-        response.json("Specify a product name");
+    if (request.params.quote_text == "") {
+        response.json("Specify a quote text");
     } else {
-        var productDetails = getProducts(request.params.product_name);
+        var yodaQuoteDetails = getFromYodaSpeak(request.params.quote_text);
 
         //get the data from the first api call
-        productDetails.on('end', function (item) {
-            //console.log(item);
+        yodaQuoteDetails.on('end', function (item) {
+            console.log(item);
             response.json(item);
         });
 
         //error handling
-        productDetails.on('error', function (code) {
+        yodaQuoteDetails.on('error', function (code) {
             response.sendStatus(code);
         });
     }
