@@ -99,6 +99,28 @@ var getFromYodaSpeak = function(searchTerm) {
     return emitter;
 };
 
+// external API call
+var getFromFamousQuotes = function() {
+    var emitter = new events.EventEmitter();
+    //console.log("inside getFromActive function");
+    unirest.post("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=10")
+        .header("X-Mashape-Key", "k8mRsliHRomshdTUOoSELbEBhicEp1idX4ejsnpN0qshKyXlUA")
+        .header("Content-Type", "application/x-www-form-urlencoded")
+        .header("Accept", "application/json")
+        .end(function(result) {
+        console.log(result.status, result.headers, result.body);
+        //success scenario
+        if (result.ok) {
+            emitter.emit('end', result.body);
+        }
+        //failure scenario
+        else {
+            emitter.emit('error', result.code);
+        }
+    });
+    return emitter;
+};
+
 // local API endpoints
 app.get('/yoda-quote/:quote_text', function (request, response) {
     //console.log(request.params.product_name);
@@ -115,6 +137,26 @@ app.get('/yoda-quote/:quote_text', function (request, response) {
 
         //error handling
         yodaQuoteDetails.on('error', function (code) {
+            response.sendStatus(code);
+        });
+    }
+});
+
+app.get('/famous-quote/', function (request, response) {
+    //console.log(request.params.product_name);
+    if (request.params.quote_text == "") {
+        response.json("Specify a quote text");
+    } else {
+        var famousQuoteDetails = getFromFamousQuotes();
+
+        //get the data from the first api call
+        famousQuoteDetails.on('end', function (item) {
+            console.log(item);
+            response.json(item);
+        });
+
+        //error handling
+        famousQuoteDetails.on('error', function (code) {
             response.sendStatus(code);
         });
     }
