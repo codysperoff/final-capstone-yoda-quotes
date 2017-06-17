@@ -77,12 +77,14 @@
     #search-section {
         border: 1px solid black;
         border-radius: 5px;
-        width: 100%;
+        width: 90%;
         padding: 5px;
     }
 
     #search-form button {
-        margin-top: 15px;
+        margin-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         padding: 5px;
         border-radius: 5px;
         background-color: yellow;
@@ -215,6 +217,10 @@
         margin-right: auto;
         display: inline-block;
         width: 22.5%
+    }
+
+    .github-logo img {
+        width: 30px;
     }
     /*media queries*/
 
