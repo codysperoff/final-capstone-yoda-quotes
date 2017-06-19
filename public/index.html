@@ -27,12 +27,30 @@
             </section>
         </header>
 
+        <section>
+            <h2>Find some famous quotes</h2>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Pick a category</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">movies</a>
+                    <a href="#">famous</a>
+                </div>
+            </div>
+            <form id="quote-count" action="">
+                <input id="count-number" type="text" placeholder="Type in the number of quotes you want.">
+                <button id="count-button" type="submit">Yodafy</button>
+                <h3>If left empty, a single quote will be returned. Max number of quotes is 10.</h3>
+            </form>
+        </section>
+
         <section class="user-search-input">
+            <h2>Type in your own quote</h2>
             <form id="search-form" action="">
                 <input id="search-section" type="text" placeholder="Type your sentence in here.">
                 <button id="search-button" type="submit">Yodafy</button>
             </form>
         </section>
+
         <section class="results">
             <ul></ul>
         </section>
