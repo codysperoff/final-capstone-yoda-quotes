@@ -13,7 +13,8 @@
 
     <main>
         <header>
-            <h1>Yoda Quotes</h1>
+            <h1><img src="../images/yoda-quotes.png" alt="Yoda Quotes"></h1>
+            <!--            <h1>Yoda Quotes</h1>-->
             <section class="favorites-container">
                 <div class="delete-favorites">
                     <button class="delete-favorites">
@@ -26,18 +27,29 @@
                 </ul>
             </section>
         </header>
+        <section class="how-page-works">
+            <h2>Ever heard a famous quote and wondered "Hmm, I wonder what Yoda would sound like saying that." Wonder no more. Read famous quotes, written the way Yoda would say them or make up your own!</h2>
+        </section>
 
         <section>
             <h2>Find some famous quotes</h2>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Pick a category</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">movies</a>
-                    <a href="#">famous</a>
-                </div>
+            <div class="categories">
+                <input class="option" type="radio" value="0" name="option" checked>movies
+                <br>
+                <input class="option" type="radio" value="1" name="option">famous
+                <br>
             </div>
+            <!--
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Pick a category</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#">movies</a>
+        <a href="#">famous</a>
+    </div>
+</div>
+-->
             <form id="quote-count" action="">
-                <input id="count-number" type="text" placeholder="Type in the number of quotes you want.">
+                <input id="count-number" type="text" placeholder="How many quotes do you want?">
                 <button id="count-button" type="submit">Yodafy</button>
                 <h3>If left empty, a single quote will be returned. Max number of quotes is 10.</h3>
             </form>
@@ -46,7 +58,7 @@
         <section class="user-search-input">
             <h2>Type in your own quote</h2>
             <form id="search-form" action="">
-                <input id="search-section" type="text" placeholder="Type your sentence in here.">
+                <input id="search-section" type="text" placeholder="Type your quote here.">
                 <button id="search-button" type="submit">Yodafy</button>
             </form>
         </section>

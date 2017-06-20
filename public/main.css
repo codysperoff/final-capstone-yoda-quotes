@@ -14,7 +14,7 @@
         -webkit-padding-after: 0px;
         -webkit-padding-start: 0px;
         -webkit-padding-end: 0px;
-        /*    border: 1px solid black;*/
+        color: rgba(255, 222, 10, 1);
     }
     /*General Styles*/
 
@@ -48,7 +48,7 @@
     /*Header Styles*/
 
     header {
-        background-color: rgba(255, 255, 255, 0.48);
+        background-color: rgba(0, 0, 0, 0);
         padding-top: 15px;
         padding-bottom: 15px;
         margin-left: auto;
@@ -69,7 +69,7 @@
         border: 1px solid black;
         border-radius: 5px;
         width: 80%;
-        background-color: rgba(255, 255, 255, 0.48);
+        background-color: rgba(0, 0, 0, 0);
         padding: 20px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -77,76 +77,37 @@
         margin-right: auto;
         text-align: center;
     }
-    /* Dropdown Button */
 
-    .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
+    .how-page-works {
+        width: 65%;
     }
-    /* Dropdown button on hover & focus */
 
-    .dropbtn:hover,
-    .dropbtn:focus {
-        background-color: #3e8e41;
-    }
-    /* The container <div> - needed to position the dropdown content */
-
-    .dropdown {
-        position: relative;
+    .option {
         display: inline-block;
-    }
-    /* Dropdown Content (Hidden by Default) */
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-    /* Links inside the dropdown */
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-    /* Change color of dropdown links on hover */
-
-    .dropdown-content a:hover {
-        background-color: #f1f1f1
-    }
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-
-    .show {
-        display: block;
     }
 
     #count-number {
         border: 1px solid black;
         border-radius: 5px;
-        width: 90%;
+        width: 29%;
         padding: 5px;
+        margin-left: 40px;
+        margin-bottom: 10px;
     }
 
     #quote-count button {
         margin-left: 15px;
         margin-top: 5px;
         margin-bottom: 5px;
-        padding: 5px;
+        padding: 6px;
+        border: 1px solid;
+        border-color: rgba(255, 222, 10, 1);
         border-radius: 5px;
-        background-color: yellow;
+        background-color: black;
     }
 
     #quote-count button:hover {
-        color: yellow;
-        background-color: black;
+        background-color: rgba(66, 66, 66, 1);
         cursor: pointer;
     }
 
@@ -157,22 +118,24 @@
     #search-section {
         border: 1px solid black;
         border-radius: 5px;
-        width: 90%;
+        width: 80%;
+        margin-left: 40px;
         padding: 5px;
     }
 
     #search-form button {
         margin-left: 15px;
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
         padding: 5px;
+        border: 1px solid;
+        border-color: rgba(255, 222, 10, 1);
         border-radius: 5px;
-        background-color: yellow;
+        background-color: black;
     }
 
     #search-form button:hover {
-        color: yellow;
-        background-color: black;
+        background-color: rgba(66, 66, 66, 1);
         cursor: pointer;
     }
 
