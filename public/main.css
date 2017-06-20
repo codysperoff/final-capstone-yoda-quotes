@@ -14,6 +14,7 @@
         -webkit-padding-after: 0px;
         -webkit-padding-start: 0px;
         -webkit-padding-end: 0px;
+        /*        border: 1px solid red;*/
         color: rgba(255, 222, 10, 1);
     }
     /*General Styles*/
@@ -49,8 +50,7 @@
 
     header {
         background-color: rgba(0, 0, 0, 0);
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 25px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -80,9 +80,10 @@
 
     .how-page-works {
         width: 65%;
+        margin-top: 15px;
     }
 
-    .option {
+    .categories .option {
         display: inline-block;
     }
 
