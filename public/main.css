@@ -83,8 +83,15 @@
         margin-top: 15px;
     }
 
+    .famous-quotes h2 {
+        padding-left: 15px;
+        padding-bottom: 10px;
+    }
+
     .categories .option {
         display: inline-block;
+        margin-right: 5px;
+        margin-left: 45px;
     }
 
     #count-number {
