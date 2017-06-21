@@ -97,10 +97,11 @@
     #count-number {
         border: 1px solid black;
         border-radius: 5px;
-        width: 29%;
+        width: 25%;
         padding: 5px;
-        margin-left: 40px;
-        margin-bottom: 10px;
+        margin-left: 110px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #quote-count button {
