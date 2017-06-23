@@ -72,7 +72,6 @@
         background-color: rgba(0, 0, 0, 0);
         padding: 20px;
         margin-top: 40px;
-        margin-bottom: 40px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -189,6 +188,10 @@
 
     .results ul li img {
         width: 100%;
+    }
+
+    .user-search-input {
+        margin-bottom: 75px;
     }
 
     .favorites {
