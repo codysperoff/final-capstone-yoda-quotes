@@ -26,6 +26,10 @@ $(document).on('submit', "#search-form", function (key) {
     key.preventDefault();
     var quoteToYodafy = $('#search-section').val();
 
+    if (quoteToYodafy == "") {
+        alert('Type something in, you must.');
+    }
+
     console.log(quoteToYodafy);
     yodafyResults(quoteToYodafy);
 });
