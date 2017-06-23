@@ -1,4 +1,4 @@
-//Fuction when the user clicks to see the results
+//Fuction when the user clicks to see the results of the famous quotes
 $(document).on('submit', "#quote-count", function (key) {
     key.preventDefault();
     var userInputNumber = $('#count-number').val();
@@ -11,14 +11,25 @@ $(document).on('submit', "#quote-count", function (key) {
 
 });
 
-
+//function that takes the famous quote and 'yodafies' it
 $(document).on('submit', ".yodafy-quote", function (key) {
     key.preventDefault();
     var quoteToYodafy = $(this).find('.quote-to-yodafy').val();
 
+
     console.log(quoteToYodafy);
     yodafyResults(quoteToYodafy);
 });
+
+//function that takes the user's input and 'yodafies' it
+$(document).on('submit', "#search-form", function (key) {
+    key.preventDefault();
+    var quoteToYodafy = $('#search-section').val();
+
+    console.log(quoteToYodafy);
+    yodafyResults(quoteToYodafy);
+});
+
 
 function yodafyResults(quoteToYodafy) {
     var url = '/yoda-quote/' + quoteToYodafy;
@@ -94,6 +105,10 @@ function resultsIntoListItem(data) {
     if (data.length == 0) {
         alert("No Results Found!");
     } else {
+        resultElement += '<h1>';
+        resultElement += 'Quotes';
+        resultElement += '</h1>';
+        resultElement += '<br>';
         data.forEach(function (item) {
             resultElement += '<li>';
             resultElement += '<h2>' + item.quote + '</h2>';
@@ -102,9 +117,10 @@ function resultsIntoListItem(data) {
             resultElement += '</p>';
             resultElement += '<form class="yodafy-quote">';
             resultElement += '<input class="quote-to-yodafy" type="hidden" value="' + item.quote + '">';
-            resultElement += '<button id="count-button" type="submit">Yodafy</button>';
+            resultElement += '<button id="yodafy-count-button" type="submit">Yodafy</button>';
             resultElement += '</form>';
             resultElement += '</li>';
+            resultElement += '<br>';
         });
     }
     //console.log(resultElement);

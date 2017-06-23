@@ -102,6 +102,7 @@
         margin-left: 110px;
         margin-top: 20px;
         margin-bottom: 20px;
+        color: black;
     }
 
     #quote-count button {
@@ -120,6 +121,26 @@
         cursor: pointer;
     }
 
+    .search-results {
+        list-style-type: none;
+    }
+
+    #yodafy-count-button {
+        margin-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 6px;
+        border: 1px solid;
+        border-color: rgba(255, 222, 10, 1);
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    #yodafy-count-button:hover {
+        background-color: rgba(66, 66, 66, 1);
+        cursor: pointer;
+    }
+
     #search-form {
         padding-top: 10px;
     }
@@ -130,6 +151,7 @@
         width: 80%;
         margin-left: 40px;
         padding: 5px;
+        color: black;
     }
 
     #search-form button {
