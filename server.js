@@ -80,7 +80,7 @@ function closeServer() {
 // external API call
 var getFromYodaSpeak = function (searchTerm) {
     var emitter = new events.EventEmitter();
-    unirest.get("https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.++Oh+wait.")
+    unirest.get("https://yoda.p.mashape.com/yoda?sentence=" + searchTerm)
         .header("X-Mashape-Key", "k8mRsliHRomshdTUOoSELbEBhicEp1idX4ejsnpN0qshKyXlUA")
         .header("Accept", "text/plain")
         // .header("Accept", "application/json")
@@ -99,10 +99,10 @@ var getFromYodaSpeak = function (searchTerm) {
 };
 
 // external API call
-var getFromFamousQuotes = function () {
+var getFromFamousQuotes = function (selection, query) {
     var emitter = new events.EventEmitter();
     //console.log("inside getFromActive function");
-    unirest.post("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=10")
+    unirest.post("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=" + selection + "&count=" + query)
         .header("X-Mashape-Key", "k8mRsliHRomshdTUOoSELbEBhicEp1idX4ejsnpN0qshKyXlUA")
         .header("Content-Type", "application/x-www-form-urlencoded")
         .header("Accept", "application/json")
@@ -130,7 +130,7 @@ app.get('/yoda-quote/:quote_text', function (request, response) {
 
         //get the data from the first api call
         yodaQuoteDetails.on('end', function (item) {
-            console.log(item);
+            //            console.log(item);
             response.json(item);
         });
 
@@ -141,23 +141,21 @@ app.get('/yoda-quote/:quote_text', function (request, response) {
     }
 });
 
-app.get('/famous-quote/', function (request, response) {
-    if (request.params.quote_text == "") {
-        response.json("Specify a quote text");
-    } else {
-        var famousQuoteDetails = getFromFamousQuotes();
+app.get('/search/:selection/:query', function (request, response) {
+    console.log(request.params.selection, request.params.query);
 
-        //get the data from the first api call
-        famousQuoteDetails.on('end', function (item) {
-            console.log(item);
-            response.json(item);
-        });
+    var famousQuoteDetails = getFromFamousQuotes(request.params.selection, request.params.query);
 
-        //error handling
-        famousQuoteDetails.on('error', function (code) {
-            response.sendStatus(code);
-        });
-    }
+    //get the data from the first api call
+    famousQuoteDetails.on('end', function (item) {
+        //        console.log(item);
+        response.json(item);
+    });
+
+    //error handling
+    famousQuoteDetails.on('error', function (code) {
+        response.sendStatus(code);
+    });
 });
 
 app.post('/favorite-product', function (req, res) {
