@@ -5,7 +5,7 @@ $(document).on('submit', "#quote-count", function (key) {
     if (userInputNumber == "") {
         alert('Please type in a number 1-10');
     }
-    var userInputRadio = $('.option').val();
+    var userInputRadio = $("input[class='option']:checked").val();
     console.log(userInputNumber, userInputRadio);
     getResults(userInputNumber, userInputRadio);
 
@@ -124,7 +124,6 @@ function resultsIntoListItem(data) {
             resultElement += '<button id="yodafy-count-button" type="submit">Yodafy</button>';
             resultElement += '</form>';
             resultElement += '</li>';
-            resultElement += '<br>';
         });
     }
     //console.log(resultElement);
