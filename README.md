@@ -1,11 +1,9 @@
-# Blog app challenge solution
-==========================
 
-## Tech Products Search powered by bestbuy.com
-Thinkful (https://www.thinkful.com) Unit 2 Capstone Project - Node.js app integrating with *bestbuy.com*'s API
+## Yoda Quotes powered by yodaspeak.co.uk and api.andrux.net
+Thinkful (https://www.thinkful.com) Unit 3 Capstone Project - React and Node.js app integrating with *yodaspeak.co.uk*'s and *api.andrux.net*'s API
 
 ### Home Page
-![home page no results](https://codysperoff.github.io/node-capstone-search-products-bestbuy/README-images/home-screen-no-results.png)
+![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-no-results.png)
 
 ### Home Page with some results
 ![home page with results](https://codysperoff.github.io/node-capstone-search-products-bestbuy/README-images/home-screen-with-results.png)
