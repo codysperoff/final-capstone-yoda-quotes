@@ -46,14 +46,8 @@ The app is built with HTML, CSS, JavaScript, jQuery and Node.js. It uses AJAX JS
 
 This is v1.0 of the app, but future enhancements are expected to include:
 
-* The ability to increase, or decrease the search radius.
-* The ability to narrow down a select the condition of the product.
-* The ability to narrow down a select a certain price range.
-* The ability to narrow down a select/search for a certain brand.
-* The ability to narrow down a search for certain deals associated with the search item.
-* The ability to narrow down a search based on customer ratings (only show items with a 5 star rating).
-* The ability to narrow down a search for items with a certain color.
-* Multiple pages of results.
-* The functionality to write reviews on products that the user has purchased.
-* Other abilities that appear based on the search result (a tv search that results in an option for a certain size range on the tv)
-* The ability for a user to simultaneously add all of their favorited items to a shopping cart.
+* Added categories include books, song lyrics, and video game characters
+* The ability for a user to simultaneously search with multiple catgeories.
+* The ability for a user to take a Yodafied Quote and copy it so they can use it elsewhere.
+* The ability for a user to increase the number of searched quotes past 10.
+* The ability for a user to obtain quotes that Yoda said in the Star Wars movies and reverse-yodafy them.
