@@ -13,11 +13,11 @@ Thinkful (https://www.thinkful.com) Unit 3 Capstone Project - React and Node.js 
 
 ## Background
 
-I built this app because I wanted to search for things on bestbuy, without all of the pop-windows and advertisements that come with the site.
+I built this app because I was curious as to what famous quotes would sound like if yoda said them.
 
 ## Use Case
 
-This app gives users the ability to search for items they want and add them directly to a bestbuy shopping cart.
+This app gives users the ability to search for quotes from movies or famous people and see what they would like if yoda had said them. This app also gives users the ability to type in their own quotes to see how yoda might say it.
 
 ## Initial UX
 
@@ -27,22 +27,20 @@ The initial mobile and desktop wireframes can be seen below:
 
 ## Working Prototype
 
-You can access a working prototype of the app here: https://node-capstone-search-bestbuy.herokuapp.com/
+You can access a working prototype of the app here: https://final-capstone-yoda-quotes.herokuapp.com/
 
 ## Functionality
 The app's functionality includes:
 
-* Search for all technology related products located at bestbuy
-* Return 10 results.
-* Results provide the product name, associated picture, price, reviews and average rating if applicable, and the option to add to a best buy shopping cart
-* Add chosen results to a favorites section.
-* Delete events from favorites section.
-* Link to a shopping cart on the best buy website
-*Contains links to the github for the page, the bestbuy website, and the bestbuy facebook and twitter pages.
-
+* Search for quotes from movies or spoken by famous people.
+* Returns up to 10 results.
+* Results provide the quote, the movie or famous person that the quote is from, the button allowing users to "yodafy" the quote.
+* "Yodafy" chosen results and add them to a user's "Yodafied Quotes".
+* Delete quotes from the "Yodafied Quotes" section.
+* Contains links to the github for the page, the random quotes api, and the yoda speak api.
 ## Technical
 
-The app is built with HTML, CSS, JavaScript, jQuery and Node.js. It uses AJAX JSON calls to the *bestbuy.com* Open Platform API to return the serach results. All data is held in an mLab database during the user's session. It has been built to be fully responsive across mobile, tablet and desktop screen resolutions.
+The app is built with HTML, CSS, JavaScript, jQuery and Node.js. It uses AJAX JSON calls to the *http://api.andrux.net* Open Platform API to return the serach results and the *http://www.yodaspeak.co.uk/* Open Platform API to "yodafy" quotes. All data is held in an mLab database during the user's session. It has been built to be fully responsive across mobile, tablet and desktop screen resolutions.
 
 ## Development Roadmap
 
