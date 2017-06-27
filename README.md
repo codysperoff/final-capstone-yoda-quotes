@@ -6,10 +6,10 @@ Thinkful (https://www.thinkful.com) Unit 3 Capstone Project - React and Node.js 
 ![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-no-results.png)
 
 ### Home Page with some results
-![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-no-results.png)
+![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-with-results.png)
 
 ### Home Page with some favorites
-![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-no-results.png)
+![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-with-favorites.png)
 
 ## Background
 
