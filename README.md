@@ -3,13 +3,13 @@
 Thinkful (https://www.thinkful.com) Unit 3 Capstone Project - React and Node.js app integrating with *yodaspeak.co.uk*'s and *api.andrux.net*'s API
 
 ### Home Page
-![home page no results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-no-results.png)
+![home page no results](https://github.com/codysperoff/final-capstone-yoda-quotes/blob/master/README-images/home-screen-no-results.png)
 
 ### Home Page with some results
-![home page with results](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-with-results.png)
+![home page with results](https://github.com/codysperoff/final-capstone-yoda-quotes/blob/master/README-images/home-screen-with-results.png)
 
 ### Home Page with some favorites
-![home page with favorites](https://codysperoff.github.io/final-capstone-yoda-quotes/README-images/home-screen-with-favorites.png)
+![home page with favorites](https://github.com/codysperoff/final-capstone-yoda-quotes/blob/master/README-images/home-screen-with-favorites.png)
 
 ## Background
 
@@ -23,7 +23,7 @@ This app gives users the ability to search for quotes from movies or famous peop
 
 The initial mobile and desktop wireframes can be seen below:
 
-![Initial Wireframes](https://codysperoff.github.io/node-capstone-search-products-bestbuy/README-images/wireframe.png)
+![Initial Wireframes](https://github.com/codysperoff/final-capstone-yoda-quotes/blob/master/README-images/wireframe.png)
 
 ## Working Prototype
 
