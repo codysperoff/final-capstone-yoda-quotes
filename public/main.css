@@ -214,7 +214,7 @@
         background-image: url("../images/transparent.jpg");
         position: fixed;
         top: 15px;
-        right: 15px;
+        left: 15px;
         width: 24%;
         color: white;
         /* text-align: left; */
