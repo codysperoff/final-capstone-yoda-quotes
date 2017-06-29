@@ -318,7 +318,7 @@
     /*media queries*/
 
     @media only screen and (max-width: 800px) {
-        .results ul li {
+        .search-results li {
             /*these 2 work toghether*/
             display: block;
             width: 100%;
