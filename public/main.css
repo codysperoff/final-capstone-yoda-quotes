@@ -302,10 +302,9 @@
     }
 
     footer ul li {
-        margin-left: auto;
-        margin-right: auto;
-        display: inline-block;
-        width: 22.5%
+        padding-bottom: 5px;
+        display: block;
+        width: 100%;
     }
 
     .github-logo img {
@@ -318,8 +317,11 @@
     /*media queries*/
 
     @media only screen and (max-width: 800px) {
-        .body {
-            font-size: 80%;
+        h1 {
+            font-size: x-large;
+        }
+        h2 {
+            font-size: medium;
         }
         .search-results li {
             /*these 2 work toghether*/
