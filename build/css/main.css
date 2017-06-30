@@ -20,7 +20,7 @@
     /*General Styles*/
 
     html {
-        background: black url("../images/starwars-background-image.jpg") no-repeat center center fixed;
+        background: black url("../assets/images/starwars-background-image.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -211,7 +211,7 @@
     }
 
     .favorites-container {
-        background-image: url("../images/transparent.jpg");
+        background-image: url("../assets/images/transparent.jpg");
         position: fixed;
         top: 15px;
         left: 15px;

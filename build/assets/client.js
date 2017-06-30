@@ -243,7 +243,7 @@ function getFavoriteProducts() {
                 buildTheHtmlOutput += "<form class='deleteFavoriteValue'>";
                 buildTheHtmlOutput += "<input type='hidden' class='deleteFavoriteValueInput' value='" + productsValue._id + "'>";
                 buildTheHtmlOutput += "<button type='submit' class='deleteFavoriteButton'>";
-                buildTheHtmlOutput += "<img src='/images/delete-favorites.png' class='delete-favorite-icon'>";
+                buildTheHtmlOutput += "<img src='/assets/images/delete-favorites.png' class='delete-favorite-icon'>";
                 buildTheHtmlOutput += "</button>";
                 buildTheHtmlOutput += "</form>";
                 buildTheHtmlOutput += "</div>";
