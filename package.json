@@ -38,6 +38,9 @@
         "watch:assets": "run-s build:assets _watch:assets",
         "_watch:assets": "chokidar public/assets/**/* -c \"npm run build:assets\""
     },
+    "directories": {
+        "test": "tests"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/codysperoff/final-capstone-yoda-quotes.git"

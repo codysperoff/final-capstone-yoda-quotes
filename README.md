@@ -38,9 +38,7 @@ The app's functionality includes:
 * "Yodafy" chosen results and add them to a user's "Yodafied Quotes".
 * Delete quotes from the "Yodafied Quotes" section.
 * Contains links to the github for the page, the random quotes api, and the yoda speak api.
-## Technical
 
-The app is built with HTML, CSS, JavaScript, jQuery and Node.js. It uses AJAX JSON calls to the *http://api.andrux.net* Open Platform API to return the serach results and the *http://www.yodaspeak.co.uk/* Open Platform API to "yodafy" quotes. All data is held in an mLab database during the user's session. It has been built to be fully responsive across mobile, tablet and desktop screen resolutions.
 
 ## Development Roadmap
 
@@ -51,3 +49,21 @@ This is v1.0 of the app, but future enhancements are expected to include:
 * The ability for a user to take a Yodafied Quote and copy it so they can use it elsewhere.
 * The ability for a user to increase the number of searched quotes past 10.
 * The ability for a user to obtain quotes that Yoda said in the Star Wars movies and reverse-yodafy them.
+
+## Technical
+
+The app is built with HTML, CSS, JavaScript, jQuery and Node.js. It uses AJAX JSON calls to the *http://api.andrux.net* Open Platform API to return the serach results and the *http://www.yodaspeak.co.uk/* Open Platform API to "yodafy" quotes. All data is held in an mLab database during the user's session. It has been built to be fully responsive across mobile, tablet and desktop screen resolutions.
+
+#### To preview the app:
+* clone the repository
+* run "npm install"
+
+#### To build Node:
+* run "npm run start"
+
+#### To build the React:
+* first run "npm run build"
+* and then start the react server "npm run react"
+
+#### To test it:
+* run "npm run test"

@@ -82,7 +82,7 @@
         margin-top: 15px;
     }
 
-    .famous-quotes h2 {
+    .famous-quotes h2, .user-search-input h2 {
         padding-left: 15px;
         padding-bottom: 10px;
     }
