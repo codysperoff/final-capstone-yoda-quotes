@@ -47,7 +47,7 @@ function yodafyResults(quoteToYodafy) {
         .done(function (result) {
             /* if the results are meeningful, we can just console.log them */
             console.log(result);
-            addFavoriteProduct(result);
+            addFavoriteQuote(result);
         })
         /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
@@ -132,12 +132,12 @@ function resultsIntoListItem(data) {
 }
 
 
-//clicking the favorites to add the product
+//clicking the favorites to add the quote
 $(document).on('click', ".favorites", function (key) {
 
-    var favoriteProductName = $(this).closest('.add-product-to-favorites').find('input').val();
-    //console.log("inside favProductName", favoriteProductName);
-    addFavoriteProduct(favoriteProductName);
+    var favoriteQuoteName = $(this).closest('.add-quote-to-favorites').find('input').val();
+    //console.log("inside favQuoteName", favoriteQuoteName);
+    addFavoriteQuote(favoriteQuoteName);
 });
 
 //clicking the favorites to delete the entire favorites list
@@ -155,25 +155,25 @@ $(document).on('click', ".deleteFavorite", function (key) {
 });
 
 //function to add items
-function addFavoriteProduct(favoriteProductName) {
+function addFavoriteQuote(favoriteQuoteName) {
 
-    console.log(favoriteProductName);
+    console.log(favoriteQuoteName);
 
-    var favoriteProduct = {
-        'productName': favoriteProductName
+    var favoriteQuote = {
+        'quoteName': favoriteQuoteName
     };
 
-    console.log(favoriteProduct);
+    console.log(favoriteQuote);
 
     $.ajax({
             method: 'POST',
             dataType: 'json',
             contentType: 'application/json',
-            data: JSON.stringify(favoriteProduct),
-            url: '/favorite-product/'
+            data: JSON.stringify(favoriteQuote),
+            url: '/favorite-quote/'
         })
-        .done(function (product) {
-            getFavoriteProducts();
+        .done(function (quote) {
+            getFavoriteQuotes();
         })
         /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
@@ -191,8 +191,8 @@ function deleteFavorites() {
             dataType: 'json',
             url: '/delete-favorites/',
         })
-        .done(function (product) {
-            getFavoriteProducts();
+        .done(function (quote) {
+            getFavoriteQuotes();
         })
         /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
@@ -211,8 +211,8 @@ function deleteOneFavorite(favoritesIdToDelete) {
             dataType: 'json',
             url: '/delete-one-favorite/' + favoritesIdToDelete,
         })
-        .done(function (product) {
-            getFavoriteProducts();
+        .done(function (quote) {
+            getFavoriteQuotes();
         })
         /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
@@ -222,26 +222,26 @@ function deleteOneFavorite(favoritesIdToDelete) {
         });
 }
 
-//function to get the favorite product
-function getFavoriteProducts() {
+//function to get the favorite quote
+function getFavoriteQuotes() {
 
     $.ajax({
             method: 'GET',
             dataType: 'json',
-            url: '/favorite-products',
+            url: '/favorite-quotes',
         })
-        .done(function (products) {
-            console.log(products);
+        .done(function (quotes) {
+            console.log(quotes);
 
             var buildTheHtmlOutput = "";
 
-            $.each(products, function (productsKey, productsValue) {
+            $.each(quotes, function (quotesKey, quotesValue) {
 
                 buildTheHtmlOutput += "<li>";
-                buildTheHtmlOutput += productsValue.name;
+                buildTheHtmlOutput += quotesValue.name;
                 buildTheHtmlOutput += "<div class='deleteFavorite'>";
                 buildTheHtmlOutput += "<form class='deleteFavoriteValue'>";
-                buildTheHtmlOutput += "<input type='hidden' class='deleteFavoriteValueInput' value='" + productsValue._id + "'>";
+                buildTheHtmlOutput += "<input type='hidden' class='deleteFavoriteValueInput' value='" + quotesValue._id + "'>";
                 buildTheHtmlOutput += "<button type='submit' class='deleteFavoriteButton'>";
                 buildTheHtmlOutput += "<img src='/assets/images/delete-favorites.png' class='delete-favorite-icon'>";
                 buildTheHtmlOutput += "</button>";
@@ -265,6 +265,6 @@ function getFavoriteProducts() {
 
 
 $(document).ready(function () {
-    getFavoriteProducts();
+    getFavoriteQuotes();
     $(".results").hide();
 })

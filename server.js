@@ -3,7 +3,7 @@ const events = require('events');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./config');
-const Product = require('./models');
+const Quote = require('./models');
 
 
 
@@ -122,7 +122,7 @@ var getFromFamousQuotes = function (selection, query) {
 
 // local API endpoints
 app.get('/yoda-quote/:quote_text', function (request, response) {
-    //console.log(request.params.product_name);
+    //console.log(request.params.quote_name);
     if (request.params.quote_text == "") {
         response.json("Specify a quote text");
     } else {
@@ -158,32 +158,32 @@ app.get('/search/:selection/:query', function (request, response) {
     });
 });
 
-app.post('/favorite-product', function (req, res) {
-    console.log(req.body.productName);
-    Product.create({
-        name: req.body.productName
-    }, function (err, products) {
+app.post('/favorite-quote', function (req, res) {
+    console.log(req.body.quoteName);
+    Quote.create({
+        name: req.body.quoteName
+    }, function (err, quotes) {
         if (err) {
             return res.status(500).json({
                 message: 'Internal Server Error'
             });
         }
-        res.status(201).json(products);
+        res.status(201).json(quotes);
     });
 });
-app.get('/favorite-products', function (req, res) {
-    Product.find(function (err, products) {
+app.get('/favorite-quotes', function (req, res) {
+    Quote.find(function (err, quotes) {
         if (err) {
             return res.status(500).json({
                 message: 'Internal Server Error'
             });
         }
-        res.status(200).json(products);
+        res.status(200).json(quotes);
     });
 });
 
 app.delete('/delete-favorites', function (req, res) {
-    Product.remove(req.params.id, function (err, items) {
+    Quote.remove(req.params.id, function (err, items) {
         if (err)
             return res.status(404).json({
                 message: 'Item not found.'
@@ -193,7 +193,7 @@ app.delete('/delete-favorites', function (req, res) {
     });
 });
 app.delete('/delete-one-favorite/:favoritesId', function (req, res) {
-    Product.findByIdAndRemove(req.params.favoritesId, function (err, items) {
+    Quote.findByIdAndRemove(req.params.favoritesId, function (err, items) {
         if (err)
             return res.status(404).json({
                 message: 'Item not found.'

@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
 
-var productSchema = new mongoose.Schema({
+var quoteSchema = new mongoose.Schema({
     name: {
         type: String,
         required: false
     }
 });
 
-var Product = mongoose.model('Product', productSchema);
+var Quote = mongoose.model('Quote', quoteSchema);
 
-module.exports = Product;
+module.exports = Quote;
