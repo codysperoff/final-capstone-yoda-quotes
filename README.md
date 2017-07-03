@@ -33,6 +33,7 @@ You can access a working prototype of the app here: https://final-capstone-yoda-
 The app's functionality includes:
 
 * Search for quotes from movies or spoken by famous people.
+* Users can type in their own quote and "yodafy" it.
 * Returns up to 10 results.
 * Results provide the quote, the movie or famous person that the quote is from, the button allowing users to "yodafy" the quote.
 * "Yodafy" chosen results and add them to a user's "Yodafied Quotes".
