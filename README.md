@@ -23,7 +23,7 @@ This app gives users the ability to search for quotes from movies or famous peop
 
 The initial mobile and desktop wireframes can be seen below:
 
-![Initial Wireframes](https://github.com/codysperoff/final-capstone-yoda-quotes/blob/master/README-images/wireframe.png)
+![Initial Wireframes](https://github.com/codysperoff/final-capstone-yoda-quotes/blob/master/README-images/wireframe.jpg)
 
 ## Working Prototype
 
