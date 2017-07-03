@@ -39,7 +39,7 @@
         "_watch:assets": "chokidar public/assets/**/* -c \"npm run build:assets\""
     },
     "directories": {
-        "test": "tests"
+        "test": "test"
     },
     "repository": {
         "type": "git",
