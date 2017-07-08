@@ -15,12 +15,12 @@
         -webkit-padding-start: 0px;
         -webkit-padding-end: 0px;
         /*        border: 1px solid red;*/
-        color: rgba(255, 222, 10, 1);
+        color: #CA8;
     }
     /*General Styles*/
 
     html {
-        background: black url("../assets/images/starwars-background-image.jpg") no-repeat center center fixed;
+        background: black url("../assets/images/yoda-background-image.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -28,7 +28,7 @@
     }
 
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Special Elite', cursive;
         color: black;
         position: relative;
         height: 100%;
@@ -50,20 +50,26 @@
 
     header {
         background-color: rgba(0, 0, 0, 0);
-        padding-top: 25px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
 
     h1 {
+        background-image: url(../assets/images/transparent.jpg);
         font-size: xx-large;
+        padding: 15px;
     }
 
     h2 {
         font-size: x-large;
+        color: #CC9;
     }
     /*Content Styles*/
+
+    .yodafied-quotes {
+        color: rgba(255, 222, 10, 1);
+    }
 
     section {
         border: 1px solid black;
@@ -78,11 +84,16 @@
     }
 
     .how-page-works {
-        width: 65%;
+        background-image: url(../assets/images/transparent.jpg);
         margin-top: 15px;
     }
 
-    .famous-quotes h2, .user-search-input h2 {
+    .famous-quotes {
+        background-image: url(../assets/images/transparent.jpg);
+    }
+
+    .famous-quotes h2,
+    .user-search-input h2 {
         padding-left: 15px;
         padding-bottom: 10px;
     }
@@ -98,10 +109,14 @@
         border-radius: 5px;
         width: 25%;
         padding: 5px;
-        margin-left: 110px;
+        margin-left: 10px;
         margin-top: 20px;
         margin-bottom: 20px;
         color: black;
+    }
+
+    .count-number-desc {
+        display: inline-block;
     }
 
     #quote-count button {
@@ -203,6 +218,7 @@
     }
 
     .user-search-input {
+        background-image: url(../assets/images/transparent.jpg);
         margin-bottom: 75px;
     }
 

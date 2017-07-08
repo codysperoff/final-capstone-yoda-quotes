@@ -109,10 +109,6 @@ function resultsIntoListItem(data) {
     if (data.length == 0) {
         alert("No Results Found!");
     } else {
-        resultElement += '<h1>';
-        resultElement += 'Quotes';
-        resultElement += '</h1>';
-        resultElement += '<br>';
         data.forEach(function (item) {
             resultElement += '<li>';
             resultElement += '<h2>' + item.quote + '</h2>';
