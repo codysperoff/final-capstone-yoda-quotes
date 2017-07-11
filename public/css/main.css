@@ -67,6 +67,11 @@
     }
     /*Content Styles*/
 
+    .yoda-logo {
+        width: 70px;
+        padding-right: 10px;
+    }
+
     .yodafied-quotes {
         color: rgba(255, 222, 10, 1);
     }
